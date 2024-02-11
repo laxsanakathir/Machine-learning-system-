@@ -1,0 +1,41 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Stock Price Prediction Dashboard</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="navbar">
+    <div class="logo">
+      <img src="LOGO.png" alt="Logo">
+    
+    <a class="nav-link" href="#">Home</a>
+    <a class="nav-link" href="#">Dashboard</a>
+    <a class="nav-link" href="data.html">Data</a>
+  </div>
+  <div class="container">
+    <h1>Stock Price Prediction Dashboard</h1>
+    <div class="input-container">
+      <label for="stockSymbol">Stock Symbol:</label>
+      <input type="text" id="stockSymbol" placeholder="Stock Symbol">
+      <button id="fetchButton">Company Stock Graph</button>
+    </div>
+    <div class="chart-container">
+  
+      <canvas id="stockChart"></canvas>
+    </div>
+    <div style="border: 1px solid #00fff2; padding: 10px; border-radius: 5px; background-color: #d3ff43;">
+      <p><strong>1.</strong> GE - General Electric, <strong>2.</strong> MCD - McDonald's, <strong>3.</strong> XOM - ExxonMobil, <strong>4.</strong> PFE - Pfizer, <strong>5.</strong> CVX - Chevron, <strong>6.</strong> SPY - SPDR S&P 500 ETF Trust, <strong>7.</strong> QCOM - Qualcomm, <strong>8.</strong> MMM - 3M Company, <strong>9.</strong> CAT - Caterpillar, <strong>10.</strong> PEP - PepsiCo, <strong>11.</strong> KO - The Coca-Cola Company, <strong>12.</strong> IBM - International Business Machines Corporation, <strong>13.</strong> ORCL - Oracle Corporation, <strong>14.</strong> NKE - Nike, <strong>15.</strong> MS - Morgan Stanley, <strong>16.</strong> BAC - Bank of America, <strong>17.</strong> GM - General Motors, <strong>18.</strong> F - Ford Motor Company, <strong>19.</strong> VZ - Verizon Communications, <strong>20.</strong> WFC - Wells Fargo, <strong>21.</strong> MRK - Merck & Co.</p>
+    </div>
+    
+    
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
+

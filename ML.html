@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Stock Prediction Dashboard</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 20px;
+      text-align: center;
+    }
+    .chart-container {
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Stock Prediction Dashboard</h1>
+    <div class="chart-container">
+      <canvas id="predictionChart"></canvas>
+    </div>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script>
+    const actualData = [/* Actual closing prices */];
+    const predictedData = [/* Predicted closing prices */];
+
+    const ctx = document.getElementById('predictionChart').getContext('2d');
+
+    const predictionChart = new Chart(ctx, {
+      type: 'line',
+      data: {
+        labels: Array.from({ length: actualData.length }, (_, i) => i + 1),
+        datasets: [
+          {
+            label: 'Actual Closing Prices',
+            data: actualData,
+            borderColor: 'blue',
+            backgroundColor: 'transparent',
+          },
+          {
+            label: 'Predicted Closing Prices',
+            data: predictedData,
+            borderColor: 'red',
+            backgroundColor: 'transparent',
+          },
+        ],
+      },
+      options: {
+        scales: {
+          x: {
+            title: {
+              display: true,
+              text: 'Days',
+            },
+          },
+          y: {
+            title: {
+              display: true,
+              text: 'Closing Price',
+            },
+          },
+        },
+      },
+    });
+  </script>
+</body>
+</html>
